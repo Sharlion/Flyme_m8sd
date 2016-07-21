@@ -20,6 +20,7 @@ ro.build.flavor=cm_mecdug-userdebug
 ro.product.brand=htc
 ro.product.name=cm_mecdug
 ro.product.board=MSM8974
+ro.product.device=M8sd
 # ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
 # use ro.product.cpu.abilist instead.
 ro.product.cpu.abi=armeabi-v7a

@@ -1166,7 +1166,7 @@
 
     move-result-object v1
 
-    const v19, 0x108043d
+    const v19, #android:drawable@ic_sim_card_multi_24px_clr#t
 
     move/from16 v0, v19
 
@@ -1220,15 +1220,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v1
+    #move-result v1
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v15
+    #move-result v15
+
+    const/4 v15, 0x1
 
     .line 377
     .local v15, "status":I
@@ -1236,15 +1238,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v1
+    #move-result v1
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v16
+    #move-result v16
+
+    const/16 v16, -0x1
 
     .line 379
     .local v16, "nwMode":I
@@ -1252,15 +1256,17 @@
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v1
+    #move-result v1
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v17
+    #move-result v17
+
+    const/16 v17, -0x1
 
     .line 383
     .local v17, "userNwMode":I
@@ -1550,7 +1556,7 @@
 
     move-result-object v4
 
-    const v5, 0x107000a
+    const v5, #android:array@sim_colors#t
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -6088,7 +6094,7 @@
 
     move-result-object v2
 
-    const v3, 0x112005e
+    const v3, #android:bool@config_voice_capable#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -8139,7 +8145,7 @@
     .line 980
     iget-object v3, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
 
-    const v4, 0x104000e
+    const v4, #android:string@unknownName#t
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -8768,7 +8774,8 @@
     .param p2, "nwMode"    # I
 
     .prologue
-    .line 1743
+    return-void
+
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -8921,7 +8928,7 @@
 
     move-result-object v2
 
-    const v3, 0x11200a9
+    const v3, #android:bool@config_spn_display_control#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -8947,7 +8954,7 @@
     .line 884
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
 
-    const v3, 0x10406de
+    const v3, #android:string@kg_text_message_separator#t
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -9123,6 +9130,8 @@
 
     move-result v3
 
+    const/4 v3, 0x0
+
     if-eqz v3, :cond_0
 
     .line 1785
@@ -9242,7 +9251,8 @@
     .param p2, "nwMode"    # I
 
     .prologue
-    .line 1762
+    return-void
+
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

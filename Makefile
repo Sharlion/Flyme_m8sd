@@ -108,7 +108,7 @@ board_saved_files := lib/libwebviewchromium.so
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-#board_modify_apps := TeleService
+board_modify_apps := TeleService SystemUI
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -130,8 +130,8 @@ board_saved_files := lib/libwebviewchromium.so
 # The property decide whether hide the soft mainkeys.
 # If 1, hide the soft mainkeys. If 0, display the soft mainkeys.
 # You should configure the property according to your device.
-#override_property += \
-#    qemu.hw.mainkeys=0
+override_property += \
+    qemu.hw.mainkeys=0
 
 
 # The value of the property ro.flyme.romer will be contained in the ota package name.
@@ -141,8 +141,9 @@ board_saved_files := lib/libwebviewchromium.so
 # The default value is Nexus-5_Unofficial.
 # You should configure the property according to your device and your ID with replace the "Nexus-5_Unofficial".
 override_property += \
-    ro.flyme.romer=Unofficial \
-    ro.product.model_romer=Nexus-5_Unofficial
+    ro.flyme.romer=Sharlion \
+    ro.product.model_romer=M8sd_Sharlion
+    ro.product.device=M8sd
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
